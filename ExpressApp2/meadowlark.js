@@ -40,6 +40,7 @@ var fortunes = [
     "Do not fear what you don't know.",
     "You will have a pleasant surprise.",
     "Whenever possible, keep it simple.",
+    "More fortunes required.",
 ];
 
 
