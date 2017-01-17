@@ -1,4 +1,5 @@
 ﻿/// <autosync enabled="true" />
+/// <reference path="../../lib/fortune.js" />
 /// <reference path="../../meadowlark.js" />
 /// <reference path="bootstrap.js" />
 /// <reference path="jquery.validate.js" />

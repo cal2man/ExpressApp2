@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-
+var fortune = require('./lib/fortune.js');
 var express = require('express');
 /*
 var routes = require('./routes');
@@ -33,19 +33,6 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 */
 
-
-var fortunes = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need springs.",
-    "Do not fear what you don't know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple.",
-    "More fortunes required.",
-];
-
-
-
-
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
@@ -53,9 +40,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/about', function (req, res) {
-    var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-    console.log('Random Fortune:' + randomFortune);
-    res.render('about', {fortune: randomFortune});
+    res.render('about', {fortune: fortune.getFortune()});
 }); 
 
 
